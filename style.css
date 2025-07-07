@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffafc;
+  overflow: hidden;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #ffb6c1;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ffa2b5;
+}
+
+.flower-page {
+  background: linear-gradient(to bottom right, #fff1f5, #fce4ec);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.flower-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flower-img {
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.floating-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ff69b4;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  animation: pulse 2s infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.floating-text {
+  position: absolute;
+  font-size: 18px;
+  color: #ff69b4;
+  font-weight: bold;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: float-around 12s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes float-around {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translate(30px, -50px) rotate(10deg);
+  }
+  50% {
+    transform: translate(-20px, 60px) rotate(-10deg);
+  }
+  75% {
+    transform: translate(50px, -30px) rotate(15deg);
+  }
+  100% {
+    transform: translate(-60px, -80px) rotate(-15deg);
+    opacity: 0;
+  }
+}
